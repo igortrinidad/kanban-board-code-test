@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.1.13](https://github.com/igortrinidad/kanban-board-code-test/compare/v0.1.12...v0.1.13) (2023-06-08)
+
+
+### Features
+
+* Added remove action ([d8626bc](https://github.com/igortrinidad/kanban-board-code-test/commit/d8626bc4487f7525308d0ab5901e6e10be90f707))
+
 ### [0.1.12](https://github.com/igortrinidad/kanban-board-code-test/compare/v0.1.11...v0.1.12) (2023-06-08)
 
 
