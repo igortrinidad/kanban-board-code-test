@@ -7,9 +7,9 @@
       <h2 class="font-semibold">{{ column.name }}</h2>
     </div>
 
-    <div class="w-full p-4">
+    <div class="w-full p-4 max-h-[60vh] overflow-y-auto overflow-x-hidden">
       <Draggable
-        class="list-group max-h-[60vh] overflow-y-auto"
+        class="list-group "
         tag="ul"
         :list="getColumnItems"
         v-bind="dragOptions"
