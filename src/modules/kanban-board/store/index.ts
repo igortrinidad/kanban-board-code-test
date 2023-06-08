@@ -18,27 +18,27 @@ const itemsExample = ['First Item', 'Second Item', 'Third Item', 'Fourth Item', 
 const columnsExample = [
   {
     key: 'backlog',
-    id: StringHelpers.randomString(10),
+    id: StringHelpers.randomString(16),
     name: 'Backlog',
-    items: itemsExample.map((item) => ({ content: item, id: StringHelpers.randomString(10) }))
+    items: itemsExample.map((item) => ({ content: item, id: StringHelpers.randomString(16) }))
   },
   {
     key: 'to-do',
-    id: StringHelpers.randomString(10),
+    id: StringHelpers.randomString(16),
     name: 'To Do',
-    items: itemsExample.map((item) => ({ content: item, id: StringHelpers.randomString(10) }))
+    items: itemsExample.map((item) => ({ content: item, id: StringHelpers.randomString(16) }))
   },
   {
     key: 'doing',
-    id: StringHelpers.randomString(10),
+    id: StringHelpers.randomString(16),
     name: 'Doing',
-    items: itemsExample.map((item) => ({ content: item, id: StringHelpers.randomString(10) }))
+    items: itemsExample.map((item) => ({ content: item, id: StringHelpers.randomString(16) }))
   },
   {
     key: 'done',
-    id: StringHelpers.randomString(10),
+    id: StringHelpers.randomString(16),
     name: 'Done',
-    items: itemsExample.map((item) => ({ content: item, id: StringHelpers.randomString(10) }))
+    items: itemsExample.map((item) => ({ content: item, id: StringHelpers.randomString(16) }))
   },
 ]
 
@@ -62,7 +62,7 @@ export const useKanbanBoardStore = defineStore('kanbanBoard', {
     addItem(columnIndex: number, content: string) {
       this.columns[columnIndex].items.push({
         content,
-        id: StringHelpers.randomString(10),
+        id: StringHelpers.randomString(16),
       })
     },
 

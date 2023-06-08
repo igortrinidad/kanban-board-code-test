@@ -27,6 +27,10 @@ body {
 
 }
 
+button:disabled {
+  opacity: 0.7;
+}
+
 /* fade **/
 .fade-enter-active,
 .fade-leave-active {

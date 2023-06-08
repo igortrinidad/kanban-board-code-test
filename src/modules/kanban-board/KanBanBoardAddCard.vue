@@ -13,7 +13,7 @@
           v-model="content"
         ></textarea>
         <div class="w-full flex space-x-2">
-          <button class="btn btn-primary text-xs" @click="addItem()" :disabled="content.length <= 2">Add</button>
+          <button class="btn btn-primary text-xs" @click="addItem()" :disabled="!content.length">Add</button>
           <button class="btn text-xs" @click="toggleAddCard()">Cancel</button>
         </div>
       </div>
