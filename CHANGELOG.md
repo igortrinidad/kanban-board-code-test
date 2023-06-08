@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.1.18](https://github.com/igortrinidad/kanban-board-code-test/compare/v0.1.17...v0.1.18) (2023-06-08)
+
+
+### Features
+
+* Added drag system to columns ([e7e7b81](https://github.com/igortrinidad/kanban-board-code-test/commit/e7e7b813f6fdf900182c5947003e007aba75d3b0))
+* Added handle esc on add card component and keydown enter to input ([f8ea747](https://github.com/igortrinidad/kanban-board-code-test/commit/f8ea747011c3e6f14852aef7458ba2ce0149a45c))
+
 ### [0.1.17](https://github.com/igortrinidad/kanban-board-code-test/compare/v0.1.16...v0.1.17) (2023-06-08)
 
 
