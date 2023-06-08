@@ -1,0 +1,48 @@
+
+name: Deploy docs
+
+on:
+  push:
+    branches:
+      - main
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.head_ref || github.ref_name }}
+  cancel-in-progress: true
+
+jobs:
+  build-gh-docs:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+
+      - name: Setup Node.js environment
+        uses: actions/setup-node@v3
+        with:
+          node-version: '18.16.0'
+
+      - name: Checkout docs
+        run: |
+          git config user.email "igorlucast@hotmail.com"
+          git config user.name "Igor Trindade"
+          git checkout docs
+          git pull
+          git merge main
+
+      - name: Install dependencies and build API
+        run: |
+          npm ci
+          npm run build
+
+      - name: Install standard-version and release new version
+        run: |
+          git add -A
+          npm run release --commit-all
+
+      - name: Push changes and tags to docs branch
+        run: |
+          git push --follow-tags origin docs
