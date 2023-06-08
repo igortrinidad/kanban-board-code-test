@@ -9,6 +9,10 @@ const routes: Array<RouteConfig> = [
     path: '/',
     name: 'kanban-board',
     component: KanbanBoardIndex
+  },
+  {
+    path: '*',
+    component: KanbanBoardIndex
   }
 ]
 
