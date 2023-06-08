@@ -5,26 +5,40 @@
       <h2 class="text-2xl font-bold text-gray-800">Kanban Board</h2>
     </div>
     
-    <div class="w-full flex space-x-6 overflow-x-auto pb-8">
-      <KanbanBoardColumn 
-        v-for="(column, index) in getColumns"
-        :key="column.id"
-        :column="column"
-        :column-index="index"
-      ></KanbanBoardColumn>
+    <div class="">
+      <Draggable
+        class="w-full flex space-x-6 overflow-x-auto pb-8"
+        tag="ul"
+        :list="getColumns"
+        animation="200"
+        group="columns"
+        :disabled="false"
+        :ghostClass="'ghost'"
+        handle=".handle-column-drag"
+        @start="drag = true"
+        @end="drag = false"
+      >
+        <KanbanBoardColumn 
+          v-for="(column, index) in getColumns"
+          :key="column.id"
+          :column="column"
+          :column-index="index"
+        />
+      </Draggable>
     </div>
   </div>
 </template>
 
 <script>
 
+import Draggable from 'vuedraggable'
 import KanbanBoardColumn from './KanbanBoardColumn.vue'
-
 import { useKanbanBoardStore } from './store'
 
 export default {
   components: {
-    KanbanBoardColumn
+    KanbanBoardColumn,
+    Draggable
   },
   computed: {
     getColumns() {

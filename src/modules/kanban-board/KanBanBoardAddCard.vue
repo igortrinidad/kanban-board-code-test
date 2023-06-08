@@ -11,6 +11,7 @@
           class="w-full rounded-md p-2 focus:outline-none focus:ring focus:border-sky-500" 
           placeholder="Enter a title for this card"
           v-model="content"
+          @keydown.enter="addItem()"
         ></textarea>
         <div class="w-full flex space-x-2">
           <button class="btn btn-primary text-xs" @click="addItem()" :disabled="!content.length">Add</button>
@@ -35,8 +36,15 @@ export default {
   data() {
     return {
       addCard: false,
-      content: ''
+      content: '',
     }
+  },
+  mounted() {
+    // add esc event listener
+    document.addEventListener('keydown', this.handleEsc)
+  },
+  beforeDestroy() {
+    document.removeEventListener('keydown', this.handleEsc)
   },
   methods: {
     toggleAddCard() {
@@ -46,16 +54,25 @@ export default {
           this.$nextTick(() => {
             this.$refs.textarea.focus()
           })
+        } else {
+          this.content = ''
         }
       }, 300)
     },
 
     addItem() {
+      if(!this.content) return
       this.toggleAddCard()
       setTimeout(() => {
         useKanbanBoardStore().addItem(this.columnIndex, this.content)
         this.content = ''
       }, 200)
+    },
+
+    handleEsc(e) {
+      if(e.key === 'Escape') {
+        this.addCard = false
+      }
     }
   }
 }
