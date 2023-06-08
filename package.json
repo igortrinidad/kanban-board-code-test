@@ -18,8 +18,7 @@
     "standard-version": "^9.5.0",
     "vue": "^2.6.14",
     "vue-router": "^3.5.1",
-    "vuedraggable": "^2.24.3",
-    "vuex": "^3.6.2"
+    "vuedraggable": "^2.24.3"
   },
   "devDependencies": {
     "@types/jest": "^27.0.1",
@@ -31,7 +30,6 @@
     "@vue/cli-plugin-router": "~5.0.0",
     "@vue/cli-plugin-typescript": "~5.0.0",
     "@vue/cli-plugin-unit-jest": "~5.0.0",
-    "@vue/cli-plugin-vuex": "~5.0.0",
     "@vue/cli-service": "~5.0.0",
     "@vue/eslint-config-typescript": "^9.1.0",
     "@vue/test-utils": "^1.1.3",
