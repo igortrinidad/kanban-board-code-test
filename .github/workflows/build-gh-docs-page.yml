@@ -1,5 +1,5 @@
 
-name: Deploy docs
+name: Build App and Deploy Github Pages
 
 on:
   push:
@@ -11,7 +11,7 @@ concurrency:
   cancel-in-progress: true
 
 jobs:
-  build-gh-docs:
+  build-app-and-deploy-github-pages:
     runs-on: ubuntu-latest
 
     steps:
@@ -25,11 +25,11 @@ jobs:
         with:
           node-version: '18.16.0'
 
-      - name: Checkout docs
+      - name: Checkout gh-pages
         run: |
           git config user.email "igorlucast@hotmail.com"
           git config user.name "Igor Trindade"
-          git checkout docs
+          git checkout gh-pages
           git pull
           git merge main
 
@@ -43,8 +43,8 @@ jobs:
           git add -A
           npm run release --commit-all
 
-      - name: Push changes and tags to docs branch
+      - name: Push changes and tags to gh-pages branch
         run: |
-          git push --follow-tags origin docs
+          git push --follow-tags origin gh-pages
 
           
