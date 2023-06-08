@@ -1,4 +1,4 @@
-# Repository Description: Vue.js and Tailwind Kanban Board
+# Vue.js and TailwindCSS Kanban Board Code Test for QuantifyHQ
 
 Welcome to the Vue.js and Tailwind Kanban Board repository! This project showcases my expertise in building a highly interactive and visually appealing Kanban board, taking inspiration from the popular Trello application. With a host of exciting features, this Kanban board is designed to enhance task management and streamline workflows.
 
