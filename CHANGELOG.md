@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.1.22](https://github.com/igortrinidad/kanban-board-code-test/compare/v0.1.21...v0.1.22) (2023-06-08)
+
+
+### Features
+
+* Handling api errors ([1add102](https://github.com/igortrinidad/kanban-board-code-test/commit/1add1027e10e2f63d5008ec687c09094061d916f))
+
 ### [0.1.21](https://github.com/igortrinidad/kanban-board-code-test/compare/v0.1.20...v0.1.21) (2023-06-08)
 
 
