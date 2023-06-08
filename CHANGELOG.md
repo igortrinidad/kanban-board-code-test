@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.1.12](https://github.com/igortrinidad/kanban-board-code-test/compare/v0.1.11...v0.1.12) (2023-06-08)
+
+
+### Bug Fixes
+
+* Fixed scrollbar ([6da9b8c](https://github.com/igortrinidad/kanban-board-code-test/commit/6da9b8cc69c911901c29aa5c078956afec65126a))
+
 ### [0.1.11](https://github.com/igortrinidad/kanban-board-code-test/compare/v0.1.10...v0.1.11) (2023-06-08)
 
 
