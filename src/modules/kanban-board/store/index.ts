@@ -17,6 +17,12 @@ const itemsExample = ['First Item', 'Second Item', 'Third Item', 'Fourth Item', 
 
 const columnsExample = [
   {
+    key: 'backlog',
+    id: StringHelpers.randomString(10),
+    name: 'Backlog',
+    items: itemsExample.map((item) => ({ content: item, id: StringHelpers.randomString(10) }))
+  },
+  {
     key: 'to-do',
     id: StringHelpers.randomString(10),
     name: 'To Do',
