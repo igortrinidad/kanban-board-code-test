@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.1.6](https://github.com/igortrinidad/kanban-board-code-test/compare/v0.1.5...v0.1.6) (2023-06-08)
+
+
+### Features
+
+* Added .nojekyll to docs folder ([ad5f822](https://github.com/igortrinidad/kanban-board-code-test/commit/ad5f8223ef253ca3272fd63eb91c777bc59f1523))
+
 ### [0.1.5](https://github.com/igortrinidad/kanban-board-code-test/compare/v0.1.4...v0.1.5) (2023-06-08)
 
 
