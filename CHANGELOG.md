@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.1.23](https://github.com/igortrinidad/kanban-board-code-test/compare/v0.1.22...v0.1.23) (2023-06-08)
+
+
+### Bug Fixes
+
+* Fixed remove item click on mobile ([9c98fdd](https://github.com/igortrinidad/kanban-board-code-test/commit/9c98fdd812977dca2580c0d78483a47963eb15fe))
+
 ### [0.1.22](https://github.com/igortrinidad/kanban-board-code-test/compare/v0.1.21...v0.1.22) (2023-06-08)
 
 
