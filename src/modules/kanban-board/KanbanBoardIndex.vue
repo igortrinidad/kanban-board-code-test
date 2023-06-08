@@ -15,8 +15,6 @@
         :disabled="false"
         :ghostClass="'ghost'"
         handle=".handle-column-drag"
-        @start="drag = true"
-        @end="drag = false"
       >
         <KanbanBoardColumn 
           v-for="(column, index) in getColumns"

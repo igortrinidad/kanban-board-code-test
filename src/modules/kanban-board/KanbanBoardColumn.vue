@@ -22,24 +22,29 @@
 
     <div class="w-full p-4 max-h-[60vh] overflow-y-auto overflow-x-hidden">
       <Draggable
-        class="list-group "
-        tag="ul"
         :list="getColumnItems"
+        class="list-group"
+        tag="ul"
         animation="200"
         group="items"
-        :disabled="false"
         :ghostClass="'ghost'"
-        @start="drag = true"
-        @end="drag = false"
+        handle=".handle-drag-item"
       >
-      <li
-        class="cursor-move rounded p-2 bg-gray-200 mb-3 flex items-center justify-between"
-        v-for="(item, itemIndex) in getColumnItems"
-        :key="`column-${ item.id }`"
-      >
-        <span class="">{{ item.content }}</span>
-        <button class="font-semibold" @click.stop="removeItem(itemIndex)">X</button>
-      </li>
+        <li
+          class="cursor-move rounded bg-gray-200 mb-3 flex items-start justify-between"
+          v-for="(item, itemIndex) in getColumnItems"
+          :key="`column-${ item.id }`"
+        >
+          <div class="handle-drag-item p-2">
+            {{ item.content }}
+          </div>
+          <button 
+            class="btn font-semibold" 
+            @click.stop.prevent="removeItem(itemIndex)" 
+          >
+            X
+          </button>
+        </li>
       </Draggable>
 
       <KanBanBoardAddCardVue :column-index="columnIndex" />
