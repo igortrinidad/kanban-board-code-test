@@ -33,14 +33,13 @@ jobs:
           git pull
           git merge main
 
-      - name: Install dependencies and build API
+      - name: Install dependencies and build
         run: |
           npm ci
           npm run build
-          cd docs
-          touch .nojekyll
+          cp ./.nojekyll ./docs/.nojekyll
 
-      - name: Install standard-version and release new version
+      - name: Release new version and tags
         run: |
           git add -A
           npm run release --commit-all

@@ -1,4 +1,7 @@
-# test-vue-2.7
+# Kanban Board Code Test
+
+# Live version
+(https://igortrinidad.github.io/kanban-board-code-test/)[https://igortrinidad.github.io/kanban-board-code-test/]
 
 ## Project setup
 ```
