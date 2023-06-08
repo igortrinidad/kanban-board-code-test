@@ -44,12 +44,20 @@ export const useKanbanBoardStore = defineStore('kanbanBoard', {
 
   getters: {
     getColumns: (state) => state.columns,
+    getItemsTotal: state => state.columns.reduce((acc, column) => acc + column.items.length, 0),
   },
 
   actions: {
     updateColumn(columnIndex: number, value: ColumnInterface) {
       this.columns[columnIndex] = value
       console.log(this.columns[columnIndex])
+    },
+
+    addItem(columnIndex: number, content: string) {
+      this.columns[columnIndex].items.push({
+        content,
+        id: StringHelpers.randomString(10),
+      })
     },
 
     removeItem(columnIndex: number, itemIndex: number) {

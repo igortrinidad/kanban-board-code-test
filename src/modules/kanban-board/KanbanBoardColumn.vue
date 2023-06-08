@@ -3,8 +3,21 @@
 <template>
   <div class="w-[244px] min-w-[244px] rounded-md bg-gray-400/40 shadow-md">
 
-    <div class="w-full bg-gray-200/80 backdrop-blur-md flex items-center justify-center mb-4 p-4 rounded-t-md">
+    <div class="w-full bg-gray-200/80 backdrop-blur-md flex items-center justify-center mb-4 p-4 pb-8 rounded-t-md relative">
       <h2 class="font-semibold">{{ column.name }}</h2>
+
+      <div class="absolute bottom-0 left-0 right-0 w-full flex flex-col">
+        <div class="w-full flex justify-between text-gray-600 px-2 mb-1 text-sm">
+          <h5>Current Stack</h5>
+          <h5>{{ getColumnPercentage }}</h5>
+        </div>
+        <div 
+          class="bg-lime-500 h-1 transition-all duration-200" 
+          :style="{ width: getColumnPercentage }"
+          :title="getColumnPercentage"
+        >
+        </div>
+      </div>
     </div>
 
     <div class="w-full p-4 max-h-[60vh] overflow-y-auto overflow-x-hidden">
@@ -26,7 +39,7 @@
       </li>
       </Draggable>
 
-      <KanBanBoardAddCardVue />
+      <KanBanBoardAddCardVue :column-index="columnIndex" />
 
     </div>
   </div>
@@ -37,6 +50,7 @@
 import Draggable from 'vuedraggable'
 import KanBanBoardAddCardVue from './KanBanBoardAddCard.vue'
 import { useKanbanBoardStore } from './store'
+import { MathHelpers } from '@igortrindade/lazyfy'
 
 export default {
   components: {
@@ -85,6 +99,10 @@ export default {
           this.tempColumn = null
         }, 10)
       }
+    },
+
+    getColumnPercentage() {
+      return this.column.items.length === 0 ? `0%` : MathHelpers.getPercentageOfAmount(useKanbanBoardStore().getItemsTotal, this.column.items.length, true, 1)
     }
   },
   
