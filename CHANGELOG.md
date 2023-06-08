@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.1.21](https://github.com/igortrinidad/kanban-board-code-test/compare/v0.1.20...v0.1.21) (2023-06-08)
+
+
+### Features
+
+* Added MockupDataApiService ([f38a950](https://github.com/igortrinidad/kanban-board-code-test/commit/f38a9500ad6b6496858bcc36a6dcdd4cd7521cae))
+
 ### [0.1.20](https://github.com/igortrinidad/kanban-board-code-test/compare/v0.1.19...v0.1.20) (2023-06-08)
 
 ### [0.1.19](https://github.com/igortrinidad/kanban-board-code-test/compare/v0.1.18...v0.1.19) (2023-06-08)
