@@ -35,7 +35,7 @@
         :key="`column-${ item.id }`"
       >
         <span class="">{{ item.content }}</span>
-        <button class="font-semibold" @click="removeItem(itemIndex)">X</button>
+        <button class="font-semibold" @click.stop="removeItem(itemIndex)">X</button>
       </li>
       </Draggable>
 
