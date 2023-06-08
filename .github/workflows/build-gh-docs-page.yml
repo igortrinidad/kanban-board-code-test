@@ -37,6 +37,8 @@ jobs:
         run: |
           npm ci
           npm run build
+          cd docs
+          touch .nojekyll
 
       - name: Install standard-version and release new version
         run: |
