@@ -3,7 +3,7 @@
 <template>
   <div class="w-[244px] min-w-[244px] rounded-md bg-gray-400/40 shadow-md">
 
-    <div class="w-full bg-gray-200/80 backdrop-blur-md flex items-center justify-center mb-4 p-4 pb-8 rounded-t-md relative">
+    <div class="handle-column-drag cursor-move w-full bg-gray-200/80 backdrop-blur-md flex items-center justify-center mb-4 p-4 pb-8 rounded-t-md relative">
       <h2 class="font-semibold">{{ column.name }}</h2>
 
       <div class="absolute bottom-0 left-0 right-0 w-full flex flex-col">
@@ -25,7 +25,10 @@
         class="list-group "
         tag="ul"
         :list="getColumnItems"
-        v-bind="dragOptions"
+        animation="200"
+        group="items"
+        :disabled="false"
+        :ghostClass="'ghost'"
         @start="drag = true"
         @end="drag = false"
       >
@@ -74,14 +77,6 @@ export default {
     }
   },
   computed: {
-    dragOptions() {
-      return {
-        animation: 200,
-        group: 'lists',
-        disabled: false,
-        ghostClass: "ghost"
-      };
-    },
 
     getColumnItems: {
       get() {
