@@ -1,32 +1,71 @@
 <template>
-  <div id="app">
-    <nav>
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </nav>
+  <div id="app" class="p-8">
     <router-view/>
   </div>
 </template>
 
 <style lang="scss">
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(132deg, #1CB5E0 0%, #000851 100%);
+  min-height: 100vh;
+
+  @apply text-gray-800;
 }
 
-nav {
-  padding: 30px;
+.btn {
+  @apply rounded-md px-4 py-2 font-semibold;
 
-  a {
-    font-weight: bold;
-    color: #2c3e50;
-
-    &.router-link-exact-active {
-      color: #42b983;
-    }
+  &.btn-primary {
+    @apply bg-gradient-to-br from-gray-700 to-gray-900 text-gray-200;
   }
+
 }
+
+/* fade **/
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 0.2s ease;
+}
+
+.fade-enter-from,
+.fade-leave-to {
+  opacity: 0;
+}
+
+/* Scrollbars */
+/* ----------------------------------------- */
+*::-webkit-scrollbar {
+  background-color: #D6DDE520;
+  width: 8px; height: 8px;
+
+}
+*::-webkit-scrollbar:vertical {
+  border-top-left-radius: 2px;
+  border-top-right-radius: 2px;
+}
+
+*::-webkit-scrollbar:horizontal {
+  border-top-left-radius: 2px;
+  border-bottom-left-radius: 2px;
+}
+
+*::-webkit-scrollbar-thumb {
+  border: 1px solid #D6DDE520;
+  background: #1f2937;
+  border-radius: 4px;
+}
+
+*::-webkit-scrollbar-corner {
+  background-color: #D6DDE520;
+  display: none;
+}
+/* ----------------------------------------- Scrollbars */
+
+
 </style>
