@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.1.9](https://github.com/igortrinidad/kanban-board-code-test/compare/v0.1.8...v0.1.9) (2023-06-08)
+
+
+### Bug Fixes
+
+* Added github public path for assets ([783ad10](https://github.com/igortrinidad/kanban-board-code-test/commit/783ad1074c8052e55d4aa4a5d706d2ab525f75dc))
+
 ### [0.1.8](https://github.com/igortrinidad/kanban-board-code-test/compare/v0.1.7...v0.1.8) (2023-06-08)
 
 ### [0.1.7](https://github.com/igortrinidad/kanban-board-code-test/compare/v0.1.6...v0.1.7) (2023-06-08)
