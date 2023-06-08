@@ -13,9 +13,15 @@ export default class MockupDataApiService {
     try {
       const response = await fetch('https://jsonplaceholder.typicode.com/todos');
       const json = await response.json();
-      return json;
+    
+      if (Array.isArray(json)) {
+        return json;
+      } else {
+        console.log('Invalid response format:', json);
+        return [];
+      }
     } catch (error) {
-      console.error(error);
+      console.log(error);
       return [];
     }
   }
