@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.1.11](https://github.com/igortrinidad/kanban-board-code-test/compare/v0.1.10...v0.1.11) (2023-06-08)
+
+
+### Features
+
+* Removed unused dependencies ([f780658](https://github.com/igortrinidad/kanban-board-code-test/commit/f780658d7dc3def037fbcdf3af94144a1a808367))
+* Update page title ([d387333](https://github.com/igortrinidad/kanban-board-code-test/commit/d38733320334ded237394439ce31d3fc55c1034e))
+
 ### [0.1.10](https://github.com/igortrinidad/kanban-board-code-test/compare/v0.1.9...v0.1.10) (2023-06-08)
 
 
