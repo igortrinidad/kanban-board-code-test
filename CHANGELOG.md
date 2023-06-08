@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.1.14](https://github.com/igortrinidad/kanban-board-code-test/compare/v0.1.13...v0.1.14) (2023-06-08)
+
+
+### Features
+
+* Added addItem action ([2a887a9](https://github.com/igortrinidad/kanban-board-code-test/commit/2a887a986fb7996e01247423fbb1ea02d766e82e))
+* Added column stack percentage ([e6647da](https://github.com/igortrinidad/kanban-board-code-test/commit/e6647daf4b4b5418e4318f825784382fcd549749))
+
 ### [0.1.13](https://github.com/igortrinidad/kanban-board-code-test/compare/v0.1.12...v0.1.13) (2023-06-08)
 
 
