@@ -51,5 +51,9 @@ export const useKanbanBoardStore = defineStore('kanbanBoard', {
       this.columns[columnIndex] = value
       console.log(this.columns[columnIndex])
     },
+
+    removeItem(columnIndex: number, itemIndex: number) {
+      this.columns[columnIndex].items.splice(itemIndex, 1)
+    }
   },
 })

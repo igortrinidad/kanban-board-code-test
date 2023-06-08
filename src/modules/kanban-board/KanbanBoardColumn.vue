@@ -17,11 +17,12 @@
         @end="drag = false"
       >
       <li
-        class="list-group-item rounded p-2 bg-gray-200 mb-3"
-        v-for="item in getColumnItems"
+        class="cursor-move rounded p-2 bg-gray-200 mb-3 flex items-center justify-between"
+        v-for="(item, itemIndex) in getColumnItems"
         :key="`column-${ item.id }`"
       >
-        {{ item.content }}
+        <span class="">{{ item.content }}</span>
+        <button class="font-semibold" @click="removeItem(itemIndex)">X</button>
       </li>
       </Draggable>
 
@@ -85,14 +86,17 @@ export default {
         }, 10)
       }
     }
+  },
+  
+  methods: {
+    removeItem(itemIndex) {
+      useKanbanBoardStore().removeItem(this.columnIndex, itemIndex)
+    }
   }
 };
 </script>
 
 <style lang="scss">
-.button {
-  margin-top: 35px;
-}
 
 .ghost {
   opacity: 0.5;
@@ -101,18 +105,11 @@ export default {
 .list-group {
   min-height: 40px;
 
-  span {
+  span:empty {
     min-height: 40px;
     width: 100%;
     display: block;
   }
 }
 
-.list-group-item {
-  cursor: move;
-}
-
-.list-group-item i {
-  cursor: pointer;
-}
 </style>
