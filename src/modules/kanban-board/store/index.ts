@@ -1,6 +1,6 @@
 import { defineStore } from 'pinia'
 import { StringHelpers } from '@igortrindade/lazyfy'
-
+import MockupDataApiService, { TodoTaskInterface } from '@/service/MockupDataApiService'
 export interface ItemInterface {
   content: string,
   id: string,
@@ -13,39 +13,10 @@ export interface ColumnInterface {
   items: Array<ItemInterface>
 }
 
-const itemsExample = ['First Item', 'Second Item', 'Third Item', 'Fourth Item', 'Fifth Item']
-
-const columnsExample = [
-  {
-    key: 'backlog',
-    id: StringHelpers.randomString(16),
-    name: 'Backlog',
-    items: itemsExample.map((item) => ({ content: item, id: StringHelpers.randomString(16) }))
-  },
-  {
-    key: 'to-do',
-    id: StringHelpers.randomString(16),
-    name: 'To Do',
-    items: itemsExample.map((item) => ({ content: item, id: StringHelpers.randomString(16) }))
-  },
-  {
-    key: 'doing',
-    id: StringHelpers.randomString(16),
-    name: 'Doing',
-    items: itemsExample.map((item) => ({ content: item, id: StringHelpers.randomString(16) }))
-  },
-  {
-    key: 'done',
-    id: StringHelpers.randomString(16),
-    name: 'Done',
-    items: itemsExample.map((item) => ({ content: item, id: StringHelpers.randomString(16) }))
-  },
-]
-
 export const useKanbanBoardStore = defineStore('kanbanBoard', {
 
   state: () => ({ 
-    columns: columnsExample as Array<ColumnInterface>, 
+    columns: [] as Array<ColumnInterface>, 
   }),
 
   getters: {
@@ -54,6 +25,29 @@ export const useKanbanBoardStore = defineStore('kanbanBoard', {
   },
 
   actions: {
+
+    loadMockupData() {
+
+      const columns = ['BackLog', 'To Do', 'Doing', 'Done']
+
+      MockupDataApiService.getTodos().then((todos: Array<TodoTaskInterface>) => {
+        this.columns = columns.map((column, index) => {
+
+          const newColumn = {
+            key: column.toLowerCase(),
+            id: StringHelpers.randomString(16),
+            name: column,
+            items: todos.slice(index * 5, (index + 1) * 5).map((todo: TodoTaskInterface) => ({
+              content: todo.title,
+              id: StringHelpers.randomString(16),
+            }))
+          }
+
+          return newColumn
+        })
+      })
+
+    },
     updateColumn(columnIndex: number, value: ColumnInterface) {
       this.columns[columnIndex] = value
       console.log(this.columns[columnIndex])

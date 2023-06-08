@@ -42,9 +42,11 @@ export default {
   },
   computed: {
     getColumns() {
-      console.log(useKanbanBoardStore().getColumns[0].items.length)
       return useKanbanBoardStore().getColumns
     }
+  },
+  mounted() {
+    useKanbanBoardStore().loadMockupData()
   }
 }
 </script>
