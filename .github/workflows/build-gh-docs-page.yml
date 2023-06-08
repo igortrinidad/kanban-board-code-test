@@ -37,7 +37,6 @@ jobs:
         run: |
           npm ci
           npm run build
-          cp ./.nojekyll ./docs/.nojekyll
 
       - name: Release new version and tags
         run: |
