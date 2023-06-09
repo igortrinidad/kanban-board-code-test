@@ -1,8 +1,17 @@
 <template>
   <div class="w-full flex flex-col space-y-8">
 
-    <div class="w-full bg-gray-200/80 rounded-md p-4 shadow-md backdrop-blur-md">
-      <h2 class="text-2xl font-bold text-gray-800">Kanban Board</h2>
+    <div class="w-full bg-gray-200/80 rounded-md p-4 shadow-md backdrop-blur-md flex justify-between items-center">
+
+      <div class="">
+        <h2 class="text-2xl font-bold text-gray-800">Kanban Board</h2>
+        <a class="text-sm font-bold text-sky-600" href="https://igortrindade.dev" target="_blank">
+          By Igor Trindade
+        </a>
+      </div>
+      <a href="https://github.com/igortrinidad/kanban-board-code-test" target="_blank">
+        <img src="/github-mark.svg" class="w-8 h-8" alt="Github Logo" />
+      </a>
     </div>
     
     <div data-test-id="columns">
