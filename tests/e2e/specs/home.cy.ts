@@ -17,7 +17,7 @@ describe('Test columns', () => {
   
   it('Visit route / and test drag and drop items inside column', () => {
     cy.visit(Cypress.env('APP_BASE_URL'))
-    cy.get('.handle-drag-item').eq(3).drag('.handle-drag-item:first')
+    cy.get('.handle-drag-item').eq(8).drag('.handle-drag-item:first', { target: { x: 20, y: 10 } })
   })
 
 })
