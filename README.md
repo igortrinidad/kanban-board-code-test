@@ -15,6 +15,10 @@ Welcome to the Vue.js and Tailwind Kanban Board repository! This project showcas
 
 4. **Responsive Design**: Experience a consistent and user-friendly interface across various devices and screen sizes. The Kanban board's responsive design ensures optimal display and interaction, whether you access it from a desktop, tablet, or mobile device. Enjoy a seamless and intuitive task management experience no matter where you are.
 
+5. **CI/CD Automated Deployment**: Leveraging GitHub Actions, this repository provides a robust CI/CD pipeline for automated deployment. With each push to the main branch, the pipeline automatically builds, tests, and deploys the Kanban board application. This ensures that the latest version of the application is always available and accessible to users.
+
+5. **Cypress End-to-End Testing**: The repository includes a comprehensive suite of end-to-end tests written with Cypress. These tests simulate user interactions and validate the functionality of the Kanban board across different scenarios. By running these tests automatically as part of the CI/CD pipeline, you can detect and address any issues or regressions quickly, ensuring the stability and reliability of the application.
+
 
 ## Project setup
 ```
