@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.1.26](https://github.com/igortrinidad/kanban-board-code-test/compare/v0.1.25...v0.1.26) (2023-06-09)
+
+
+### Bug Fixes
+
+* Fixed cypress start local server command ([70a011a](https://github.com/igortrinidad/kanban-board-code-test/commit/70a011aad8470853f180929721caee018cca80ab))
+
 ### [0.1.25](https://github.com/igortrinidad/kanban-board-code-test/compare/v0.1.24...v0.1.25) (2023-06-09)
 
 ### [0.1.24](https://github.com/igortrinidad/kanban-board-code-test/compare/v0.1.23...v0.1.24) (2023-06-09)
