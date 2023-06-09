@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.1.27](https://github.com/igortrinidad/kanban-board-code-test/compare/v0.1.26...v0.1.27) (2023-06-09)
+
+
+### Features
+
+* Added github logo and portfolio link ([1d9bde1](https://github.com/igortrinidad/kanban-board-code-test/commit/1d9bde1d092e62d7057744617385b2892e77773a))
+
 ### [0.1.26](https://github.com/igortrinidad/kanban-board-code-test/compare/v0.1.25...v0.1.26) (2023-06-09)
 
 
