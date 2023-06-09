@@ -1,7 +1,7 @@
 
 
 <template>
-  <div class="w-[244px] min-w-[244px] rounded-md bg-gray-400/40 shadow-md">
+  <div class="w-[244px] min-w-[244px] rounded-md bg-gray-400/40 shadow-md" :id="`column-${ column.id }`">
 
     <div class="handle-column-drag cursor-move w-full bg-gray-200/80 backdrop-blur-md flex items-center justify-center mb-4 p-4 pb-8 rounded-t-md relative">
       <h2 class="font-semibold">{{ column.name }}</h2>
@@ -20,7 +20,7 @@
       </div>
     </div>
 
-    <div class="w-full p-4 max-h-[60vh] overflow-y-auto overflow-x-hidden">
+    <div class="w-full p-4 max-h-[60vh] overflow-y-auto overflow-x-hidden" data-test-id="items">
       <Draggable
         :list="getColumnItems"
         class="list-group"
@@ -33,7 +33,8 @@
         <li
           class="cursor-move rounded bg-gray-200 mb-3 flex items-start justify-between"
           v-for="(item, itemIndex) in getColumnItems"
-          :key="`column-${ item.id }`"
+          :key="`item-${ item.id }`"
+          :id="`item-${ item.id }`"
         >
           <div class="handle-drag-item p-2">
             {{ item.content }}
