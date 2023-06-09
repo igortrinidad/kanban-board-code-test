@@ -5,10 +5,10 @@
       <h2 class="text-2xl font-bold text-gray-800">Kanban Board</h2>
     </div>
     
-    <div class="">
+    <div data-test-id="columns">
       <Draggable
         class="w-full flex space-x-6 overflow-x-auto pb-8"
-        tag="ul"
+        tag="div"
         :list="getColumns"
         animation="200"
         group="columns"

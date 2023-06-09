@@ -14,7 +14,11 @@
     "baseUrl": ".",
     "types": [
       "webpack-env",
-      "jest"
+      "jest",
+      "node",
+      "cypress",
+      "types",
+      "@4tw/cypress-drag-drop"
     ],
     "paths": {
       "@/*": [
