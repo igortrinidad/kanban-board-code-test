@@ -10,7 +10,7 @@
         </a>
       </div>
       <a href="https://github.com/igortrinidad/kanban-board-code-test" target="_blank">
-        <img src="/github-mark.svg" class="w-8 h-8" alt="Github Logo" />
+        <img src="https://igortrinidad.github.io/kanban-board-code-test/github-mark.svg" class="w-8 h-8" alt="Github Logo" />
       </a>
     </div>
     
