@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.1.30](https://github.com/igortrinidad/kanban-board-code-test/compare/v0.1.29...v0.1.30) (2023-06-13)
+
+
+### Bug Fixes
+
+* Updated vue to 2.7 ([e281e54](https://github.com/igortrinidad/kanban-board-code-test/commit/e281e5449c59c24d046faff729c4786987cab128))
+
 ### [0.1.29](https://github.com/igortrinidad/kanban-board-code-test/compare/v0.1.28...v0.1.29) (2023-06-10)
 
 
