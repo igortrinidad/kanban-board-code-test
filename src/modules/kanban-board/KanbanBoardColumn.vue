@@ -31,12 +31,12 @@
         handle=".handle-drag-item"
       >
         <li
-          class="cursor-move rounded bg-gray-200 mb-3 flex items-start justify-between"
+          class="rounded bg-gray-200 mb-3 flex items-start justify-between"
           v-for="(item, itemIndex) in getColumnItems"
           :key="`item-${ item.id }`"
           :id="`item-${ item.id }`"
         >
-          <div class="handle-drag-item p-2">
+          <div class="handle-drag-item cursor-move w-full p-2">
             {{ item.content }}
           </div>
           <button 
@@ -46,9 +46,9 @@
             X
           </button>
         </li>
+        <KanBanBoardAddCardVue :column-index="columnIndex" />
       </Draggable>
 
-      <KanBanBoardAddCardVue :column-index="columnIndex" />
 
     </div>
   </div>
@@ -122,13 +122,7 @@ export default {
 }
 
 .list-group {
-  min-height: 40px;
-
-  span:empty {
-    min-height: 40px;
-    width: 100%;
-    display: block;
-  }
+  min-height: 60vh;
 }
 
 </style>
