@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.1.31](https://github.com/igortrinidad/kanban-board-code-test/compare/v0.1.30...v0.1.31) (2023-06-13)
+
+
+### Bug Fixes
+
+* Fixed drag and drop zone and cursor on draggable area ([8878747](https://github.com/igortrinidad/kanban-board-code-test/commit/887874751f0054e746b7973c9bdaac0e6ddb3037))
+
 ### [0.1.30](https://github.com/igortrinidad/kanban-board-code-test/compare/v0.1.29...v0.1.30) (2023-06-13)
 
 
